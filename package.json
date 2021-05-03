@@ -2,7 +2,7 @@
   "name": "sample",
   "version": "1.0.0",
   "description": "Karaoke node app",
-  "main": "hello.js",
+  "main": "getSongs.js",
   "scripts": {
   "start": "node getSongs.js"
 },

@@ -1,10 +1,10 @@
 {
   "name": "sample",
   "version": "1.0.0",
-  "description": "my sample node app",
+  "description": "Karaoke node app",
   "main": "hello.js",
   "scripts": {
-  "start": "node hello.js"
+  "start": "node getSongs.js"
 },
   "repository": {
   "type": "git",

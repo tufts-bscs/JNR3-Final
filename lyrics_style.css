@@ -1,0 +1,42 @@
+message{
+    background-color:#F2C14E;   
+}
+
+header, lyrics_id, explicit, script_tracking_url, pixel_tracking_url, updated_time{
+    display: none;
+}
+
+lyrics{
+    font-family: cursive;
+}
+
+title,artist{
+    position: relative;
+    height: 25px;
+    background-image: linear-gradient(#EDAE49, #d1495b);
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
+    margin: 0;
+    padding: 100px 0;
+    font: 44px cursive;
+    text-align: center;
+    display: inline-block;
+}
+
+lyrics_body2,lyrics_body3,lyrics_body4, lyrics_body5, lyrics_body6, lyrics_body7, lyrics_body8, lyrics_body9, lyrics_body10, lyrics_body11, lyrics_body12, lyrics_body13, lyrics_body14, lyrics_body15, lyrics_body16, lyrics_body17, lyrics_body18, lyrics_body19, lyrics_body20, lyrics_body21, lyrics_body22,lyrics_body23,lyrics_body24,lyrics_body25,lyrics_body26,lyrics_body27,lyrics_body28,lyrics_body29,lyrics_body30,lyrics_body31,lyrics_body32,lyrics_body33,lyrics_body34{
+    padding-top: 10px;
+    display: block;
+    line-break: auto;
+    text-align: center;
+}
+
+lyrics_copyright{
+    line-break: auto;
+    text-align: center;
+    display: block;
+    font-weight: normal;
+    padding-top: 100px;
+}
+
+
+

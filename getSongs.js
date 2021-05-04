@@ -54,7 +54,7 @@ http.createServer(function (req, res)
 					  console.log("before res.write for loop");
 	  
 					  for (i=0; i<items.length; i++) {
-						  res.write("<tr><td><a href ='https://jnr3-karaoke.herokuapp.com/" + items[i].track_id + ".xml'>" + items[i].title + "</a></td><td>" + items[i].artist + "</td></tr>");
+						  res.write("<tr><td><a href ='http://bscs19.epizy.com/" + items[i].track_id + ".xml'>" + items[i].title + "</a></td><td>" + items[i].artist + "</td></tr>");
 					  }
 				  }
 				  res.end("</table></body></html>");

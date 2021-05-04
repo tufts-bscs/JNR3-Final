@@ -1,15 +1,21 @@
 
+<head>
+	<style>
+		body {
+			background-image: linear-gradient(#EDAE49, #d1495b);
+			font-family: cursive;
+			font-size: 44px; 
+			text-align: center;
+		}
+	</style>
+</head>
 <body>
 
-	<form method="post" action="https://jnr3-karaoke.herokuapp.com/process" name="artist_radio">
-	  <label for="artist">Artist:</label><br>
-	  <input type="text" id="artist" name="the_artist" value=""><br>
-	  <input type="submit" value="Submit">
+	<form  method="post" action="http://localhost:3000/process" name="artist_radio">
+		<br>
+	  <label for="artist">Artist:</label><br><br>
+	  <input type="text" id="artist" name="the_artist" value="" style="width: 60%; height: 10%; border-radius: 25px; background-color: #EDAE49; color:#fff; font-size: 40px; text-align: center;"><br><br>
+	  <input type="submit" value="Submit" style="height: 10%; width: 20%; border-radius: 25px; background-color:#d1495b; color:#fff; font-size: 20px;">
 	</form> 
-	<!-- <form method="post" action="http://localhost:8080/process">
-		<label for="company">Song Title:</label><br>
-		<input type="text" id="title" name="the_title" value=""><br><br>
-		<input type="submit" value="Submit">
-	  </form>  -->
 
 </body>

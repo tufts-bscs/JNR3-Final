@@ -1,6 +1,11 @@
 {
   "name": "sample",
   "version": "1.0.0",
+  "dependencies": {
+    "express": "3.x",
+    "mongodb": "*",
+    "mongoose": "*"
+  },
   "description": "Karaoke node app",
   "main": "getSongs.js",
   "scripts": {

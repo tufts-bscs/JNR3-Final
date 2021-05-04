@@ -10,11 +10,11 @@ http.createServer(function (req, res)
 	  
 	  if (req.url == "/")
 	  {
-		  file = 'https://github.com/tufts-bscs/JNR3-Final/blob/main/formpage.html';
+		  file = 'formpage.html';
 		  fs.readFile(file, function(err, txt) {
     	  res.writeHead(200, {'Content-Type': 'text/html'});
 		  res.write("This is the home page<br>");
-		txt = "";
+// 		txt = "";
           res.write(txt);
           res.end();
 		  });

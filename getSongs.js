@@ -1,20 +1,19 @@
 const MongoClient = require('mongodb').MongoClient;
-const uri = process.env.MONGODB_URI;
+const uri = "mongodb+srv://rriver03:rriver03@cluster0.ot60c.mongodb.net/playlists?retryWrites=true&w=majority";
 var http = require('http');
 var port = process.env.PORT || 3000;
 var fs = require('fs');
 var qs = require('querystring');
-	
+
 http.createServer(function (req, res) 
   {
-	  
 	  if (req.url == "/")
 	  {
 		  file = 'formpage.html';
 		  fs.readFile(file, function(err, txt) {
     	  res.writeHead(200, {'Content-Type': 'text/html'});
-		  res.write("This is the home page<br>");
-// 		txt = "";
+		  res.write("Wecome to Karaoke Lyric Kingdom! <br>");
+		//   txt = "";
           res.write(txt);
           res.end();
 		  });
@@ -22,10 +21,11 @@ http.createServer(function (req, res)
 	  else if (req.url == "/process")
 	  {
 		res.writeHead(200, {'Content-Type': 'text/html'});
-		res.write  ("<html><head><style>html{background-color:#80FFB3;}</style><script src='dbquery.js'></script></head>");
-		res.write("<body>Here's Your Current Playlist<br />");
-		res.write("<table>");
-		res.write("<tr><th>Title</th><th>Artist</th><th>Add</th></tr>");
+		res.write  ("<html><head><style>html{background-color:#EDAE49; font-family: cursive;}</style></head>");
+		res.write("<body><style>html{background-image: linear-gradient(#EDAE49, #d1495b); text-align: center; font-size: 60px;}</style>Available Songs:<br />");
+		res.write("<a style='font-size: 20px;' href = 'https://jnr3-karaoke.herokuapp.com/'>Back to Search</a><br><br>");
+		res.write("<table align='center' style='font-size:40px'>");
+		res.write("<tr><th>Title</th><th>Artist</th></tr>");
 		 pdata = "";
 		 req.on('data', data => {
            pdata += data.toString();
@@ -52,6 +52,7 @@ http.createServer(function (req, res)
 				  else
 				  {
 					  console.log("before res.write for loop");
+					
 	  
 					  for (i=0; i<items.length; i++) {
 						  res.write("<tr><td><a href ='http://bscs19.epizy.com/" + items[i].track_id + ".xml'>" + items[i].title + "</a></td><td>" + items[i].artist + "</td></tr>");
@@ -63,7 +64,6 @@ http.createServer(function (req, res)
 				});  //end find
 		  });
 		});
-		
 	  }
 	  else 
 	  {
@@ -71,6 +71,4 @@ http.createServer(function (req, res)
 		  res.write ("Unknown page request");
 		  res.end();
 	  }
-  
-
 }).listen(port);

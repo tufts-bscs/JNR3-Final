@@ -14,7 +14,7 @@ http.createServer(function (req, res)
 		  fs.readFile(file, function(err, txt) {
     	  res.writeHead(200, {'Content-Type': 'text/html'});
 		  res.write("This is the home page<br>");
-          res.write(txt);
+          res.write(txt.toString());
           res.end();
 		  });
 	  }
